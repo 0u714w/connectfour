@@ -1,0 +1,28 @@
+#gameboard {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    width: 100px;
+    height: 600px;
+    border: 1px solid black;
+}
+
+.red {
+    background-color: rgb(255, 62, 56);
+    width: 98px;
+    height: 98px;
+    border-radius: 50%;
+    background-image: url("/images/smiley1.png")
+}
+
+.black {
+    background-color: black;
+    width: 98px;
+    height: 98px;
+    border-radius: 50%;
+}
