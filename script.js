@@ -5,16 +5,18 @@
 
 
 const gameboard = document.getElementById("gameboard")
-let clickNum = 0
+
+let clickNum = 1
 
 const gameColumns = [
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
+    [0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0],
+
 ]
 
 for (let i = 0; i < gameColumns.length; i++) {
@@ -29,25 +31,33 @@ const playChip = function(event) {
 
     let currentCol = event.currentTarget;
 
+    let idPiece = currentCol.id
+
+    let y = 0
+    let x = document.getElementById(currentCol.id).childElementCount;
+
+    console.log(x)
+
+    if (currentCol.childElementCount == 6) {
+        return;
+    }
+
     if (clickNum % 2) {
+
 
         let redDisc = document.createElement("div")
         redDisc.classList.add('red');
         currentCol.appendChild(redDisc)
 
 
-        console.log(currentCol)
+
     } else {
-        let blackDisc = document.createElement("div")
-        blackDisc.classList.add('black');
-        currentCol.appendChild(blackDisc)
+        let yelDisc = document.createElement("div")
+        yelDisc.classList.add('yellow');
+        currentCol.appendChild(yelDisc)
     }
 
     clickNum++
-
-
-
-
 
 }
 
