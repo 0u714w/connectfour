@@ -35,7 +35,7 @@ body {
     height: 48px;
     border-radius: 50%;
     border: 1px solid;
-    background-image: url("/images/smiley2.png")
+    background-image: url("images/smiley2.png")
 }
 
 #refresh {
